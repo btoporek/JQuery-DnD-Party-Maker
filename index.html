@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DnD Party Creator</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link href="styles.css" rel="stylesheet" >
+  </head>
+  <body class="container" id="background-image">
+    <br>
+    <div class="container-fluid">
+      <!-- Navigation bar -->
+      <nav class="navbar navbar-expand-sm navbar-dark bg-transparent" style="flex-direction: column">
+        <a class="navbar-brand" href="index.html" style="font-size: 30px; color:white">  <img style= "height: 40px" src="images/ClayDowling-D20.png"> <strong>DnD Adventure Planner </strong>  <img style= "height: 40px" src="images/ClayDowling-D20.png"> </a>
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        style="color:white"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse navtext:hover" id="navbarSupportedContent">
+          <ul class="navbar-nav" style="font-size: 15px; margin-bottom: 5px;">
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="party.html">Party Creator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="character.html">Character Customization</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="feedback.html">Feedback</a>
+            </li>
+            <div style="margin-left: 1em">
+              <form class="d-flex";>
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-light btn-dark type=submit style="text-align:center">Search</button> &nbsp;
+              </form>
+          </div>
+          
+          </nav>
+    
+      <br />
+    <div id="new-party" class="container">
+      <h3 style="color: white; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Create your new DnD party below:</h3>
+      <input
+        type="text"
+        id="new-party-name"
+        class="form-control bg-light text-dark"
+        placeholder="Enter Party Name"
+        style="margin-bottom: 10px; display: flex;
+        align-items: center;"
+      />&NonBreakingSpace;<button
+      id="create-new-party"
+      class="btn btn-outline-light" type="submit"
+    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+      <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+    </svg>
+    </button>
+
+      <button
+        id="display-party"
+        class="btn btn-outline-light"
+      >
+        Display All Parties
+      </button>
+      <button
+      id="edit-parties"
+      class="btn btn-outline-light"
+    >
+      Edit Parties
+    </button>
+      <button
+      id="clear-page"
+      class="btn btn-outline-light"
+    >
+      Hide Parties
+    </button>
+
+    </div>
+
+    <div id="app"></div>
+    
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="src/dndApp.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

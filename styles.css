@@ -1,0 +1,16 @@
+#background-image {
+  background-image: url("images/photo-1650024520022-cab7611a460b.avif"); /* The image used */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-attachment: fixed;
+}
+
+#new-party-name {
+  width: 94.5%;
+  float: left;
+}
+#create-new-party {
+  width: 5%;
+  float: right;
+}
