@@ -243,12 +243,12 @@ class DOMManager {
                     <div class="row">
                         <div class="col-sm">
                         <form>
-                        <a target="_blank" href="https://www.masterthedungeon.com/dnd-name-generator/" data-toggle="tooltip" title="Help find me a name">Enter Character Name:</a><input type="text" id="${party._id}-character-name" class="form-control" ><br>
-                        <a target="_blank" href="https://www.dndbeyond.com/races" data-toggle="tooltip" title="Learn more about  Character Races">Enter Character Race:</a><input type="text" id="${party._id}-character-race" class="form-control">
+                        <a target="_blank" href="https://www.masterthedungeon.com/dnd-name-generator/" data-toggle="tooltip" title="Click for help finding a name">Enter Character Name:</a><input type="text" id="${party._id}-character-name" class="form-control" ><br>
+                        <a target="_blank" href="https://www.dndbeyond.com/races" data-toggle="tooltip" title="Click to learn more about character races">Enter Character Race:</a><input type="text" id="${party._id}-character-race" class="form-control">
                         <br>
                         
-                        <a target="_blank" href="https://www.dndbeyond.com/classes" data-toggle="tooltip" title="Learn more about Character Classes">Enter Character Class:</a><input type="text" id="${party._id}-character-class" class="form-control" ><br>
-                        <a target="_blank" href="https://www.dndbeyond.com/sources/basic-rules/personality-and-background#Alignment" data-toggle="tooltip" title="Learn more about Character Alignments">Enter Character Alignment:</a><input type="text" id="${party._id}-character-alignment" class="form-control" >
+                        <a target="_blank" href="https://www.dndbeyond.com/classes" data-toggle="tooltip" title="Click to learn more about character classes">Enter Character Class:</a><input type="text" id="${party._id}-character-class" class="form-control" ><br>
+                        <a target="_blank" href="https://www.dndbeyond.com/sources/basic-rules/personality-and-background#Alignment" data-toggle="tooltip" title="Click to learn more about character alignments">Enter Character Alignment:</a><input type="text" id="${party._id}-character-alignment" class="form-control" >
              </form>
                       
                     <button style="margin-top:10px; align-items: center; display: flex" id="${party._id}-new-character" onclick="DOMManager.addCharacter('${party._id}')" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
@@ -331,7 +331,7 @@ class DOMManager {
           $(`#${party._id}`).find(".card-body")
             .append(`<div style="margin-top: 10px">
             <button class="btn btn-warning" onclick="DOMManager.editParty('${party._id}')">Edit Party</button>&nbsp;<button class="btn btn-danger" onclick="DOMManager.deletePartyInDisplay('${party._id}')">Delete Party</button>
-          </div>`);
+            </div>`);
         }
       });
   }
