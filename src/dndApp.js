@@ -1,4 +1,4 @@
-fetch("https://63b347155901da0ab37bb978.mockapi.io/api/dndpartymaker/party")
+fetch("https://63b347155901da0ab37bb978.mockapi.io/api/party")
   .then((res) => res.json())
   .then((data) => console.log(data));
 
@@ -35,8 +35,7 @@ class Character {
 */
 
 class partyService {
-  static url =
-    "https://63b347155901da0ab37bb978.mockapi.io/api/dndpartymaker/party"; // add MOCK API url here
+  static url = "https://63b347155901da0ab37bb978.mockapi.io/api/party"; // add MOCK API url here
 
   static getAllParties() {
     //static method to return/request data from the above url using ajax get (GET - Requests data from a specified resource)
@@ -284,7 +283,7 @@ class DOMManager {
   }
 
   static display(parties) {
-    fetch("https://63b347155901da0ab37bb978.mockapi.io/api/dndpartymaker/party")
+    fetch("https://63b347155901da0ab37bb978.mockapi.io/api/party")
       .then((res) => res.json())
       .then((data) => {
         $("#app").empty();
@@ -302,7 +301,7 @@ class DOMManager {
           $("#app").prepend(
             //prepend adds new content to the top with html for all the parties below
             `<div id="${party._id}" class="card" style="margin-top: 10px">
-             <div class="card-body">
+             <div id="print-div" class="card-body">
                     <div class="row">
                         <div class="col-sm">
                         <h2 display="flex" align-items="center"><img height="60px" src="images/—Pngtree—role playing game_8817282.png"><strong> ${party.name} </strong><img height="60px" src="images/—Pngtree—role playing game_8817282.png"></h2>`
@@ -331,7 +330,8 @@ class DOMManager {
           $(`#${party._id}`).find(".card-body")
             .append(`<div style="margin-top: 10px">
             <button class="btn btn-warning" onclick="DOMManager.editParty('${party._id}')">Edit Party</button>&nbsp;<button class="btn btn-danger" onclick="DOMManager.deletePartyInDisplay('${party._id}')">Delete Party</button>
-            </div>`);
+            </div>
+            `);
         }
       });
   }

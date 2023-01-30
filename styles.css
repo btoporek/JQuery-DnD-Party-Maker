@@ -19,3 +19,13 @@ a {
   text-decoration: none;
   color: black;
 }
+
+#print-div {
+  page-break-after: always;
+}
+
+@media print {
+  .btn {
+    visibility: hidden;
+  }
+}
